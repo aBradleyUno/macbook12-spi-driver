@@ -460,7 +460,7 @@ static int appleals_config_iio(struct appleals_device *als_dev)
 	struct appleals_device **priv;
 	int rc;
 
-	iio_dev = iio_device_alloc(sizeof(als_dev));
+	iio_dev = iio_device_alloc(NULL, sizeof(als_dev));
 	if (!iio_dev)
 		return -ENOMEM;
 
